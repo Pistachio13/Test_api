@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=UTF-8"/>
+<TITLE>ข้อมูลส่วนตัว</TITLE>
+</HEAD>
+<BODY>
+<B>กีฬาที่ชื่นชอบ : </B>
+{% for x in sport %}
+	<DIV>{{x|upper}}</DIV>
+{% endfor %}
+<BR>
+<B>วิชาที่ได้คะแนนเกรด A : </B>
+{% for key,value in subject.items %}
+	{% if value >= 80 %}
+		<DIV>{{key|lower}}</DIV>
+	{% endif %}
+{% endfor %}
+<BR>
+</BODY>
+</HTML>
